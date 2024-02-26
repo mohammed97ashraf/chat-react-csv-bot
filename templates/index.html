@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status Update</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .status {
+            margin-top: 20px;
+        }
+        .chat-box, .action-button, .bot-name-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Status Update</h1>
+        <div class="status" id="status-container">
+            <strong>Status:</strong> <span id="status">File Processing</span>
+            <div class="spinner-border text-primary ml-2" role="status" id="loading-icon" style="display: none;">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <div class="chat-box mt-3" id="chat-box">
+            <!-- Chat box content here -->
+        </div>
+        <input type="text" class="form-control mt-3 bot-name-input" id="bot-name-input" placeholder="Enter your bot's name">
+        <button type="button" class="btn btn-primary action-button mt-3" id="action-button" style="display: none;">Action Button</button>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Variable to track if webhook check is needed
+        let webhookCheckNeeded = true;
+
+        // Function to fetch status from the backend
+        function fetchStatus() {
+            // If webhook check is not needed anymore, return
+            if (!webhookCheckNeeded) return;
+
+            // Show loading icon
+            document.getElementById('loading-icon').style.display = 'inline-block';
+
+            fetch('/webhook', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    action: 'check_status'
+                    fileName : {{variable_name}}
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const statusContainer = document.getElementById('status');
+                if (data.status === 'OK') {
+                    statusContainer.textContent = 'OK';
+                    statusContainer.classList.add('text-success');
+                    // Hide loading icon
+                    document.getElementById('loading-icon').style.display = 'none';
+                    // Show chat box
+                    document.getElementById('chat-box').style.display = 'block';
+                    // Show action button
+                    document.getElementById('action-button').style.display = 'block';
+                    // Show bot name input field
+                    document.getElementById('bot-name-input').style.display = 'block';
+                    // No more need for webhook check
+                    webhookCheckNeeded = false;
+                } else {
+                    statusContainer.textContent = 'Error';
+                    statusContainer.classList.add('text-danger');
+                    // Hide loading icon
+                    document.getElementById('loading-icon').style.display = 'none';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Hide loading icon
+                document.getElementById('loading-icon').style.display = 'none';
+            });
+        }
+
+        // Function to send user's bot name to chat endpoint
+        function sendBotName() {
+            const botName = document.getElementById('bot-name-input').value;
+            fetch('/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    bot_name: botName
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Redirect to "/chat"
+                    window.location.href = '/chatbot';
+                } else {
+                    console.error('Error:', response.statusText);
+                    // Handle error response if needed
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        // Initial fetch
+        fetchStatus();
+
+        // Periodically fetch status every 5 seconds
+        setInterval(fetchStatus, 5000);
+
+        // Event listener for action button click
+        document.getElementById('action-button').addEventListener('click', sendBotName);
+    </script>
+</body>
+</html>

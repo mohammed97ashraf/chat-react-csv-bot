@@ -1,0 +1,56 @@
+id_num,question,answer
+1,How does the Optic ID work for the Vision Pro?,"Optic ID data is encrypted, never leaves your device, and is accessible only to the Secure Enclave processor."
+2,What security is in place for the Vision Pro?,"Use Optic ID to authorize purchases and unlock passwords with the uniqueness of your iris. Optic ID data is encrypted, never leaves your device, and is accessible only to the Secure Enclave processor."
+3,What chips are used in the Vision Pro?,"A unique dual‑chip design enables the spatial experiences on Vision Pro. The powerful M2 chip simultaneously runs visionOS, executes advanced computer vision algorithms, and delivers stunning graphics, all with incredible efficiency. And the brand-new R1 chip is specifically dedicated to process input from the cameras, sensors, and microphones, streaming images to the displays within 12 milliseconds — for a virtually lag-free, real-time view of the world."
+4,What kind of chip is used for input and sensors in the Vision Pro?,"And the brand-new R1 chip is specifically dedicated to process input from the cameras, sensors, and microphones, streaming images to the displays within 12 milliseconds — for a virtually lag-free, real-time view of the world."
+5,What kind of chip is used for the display in the Vision Pro?,"The powerful M2 chip simultaneously runs visionOS, executes advanced computer vision algorithms, and delivers stunning graphics, all with incredible efficiency."
+6,Will I be able to see the world in real time with the displays in the Vision Pro?,"A pair of high-resolution cameras transmit over one billion pixels per second to the displays so you can see the world around you clearly. The system also helps deliver precise head and hand tracking and real‑time 3D mapping, all while understanding your hand gestures from a wide range of positions."
+7,How many pixels per second will the displays in the Vision Pro transmit?,"A pair of high-resolution cameras transmit over one billion pixels per second to the displays so you can see the world around you clearly. The system also helps deliver precise head and hand tracking and real‑time 3D mapping, all while understanding your hand gestures from a wide range of positions."
+8,How will I select things without a controller for the Vision Pro?,"A high-performance eye tracking system of LEDs and infrared cameras projects invisible light patterns onto each eye. This advanced system provides ultraprecise input without your needing to hold any controllers, so you can accurately select elements just by looking at them."
+9,How will the eye cameras work in the Vision Pro?,"A high-performance eye tracking system of LEDs and infrared cameras projects invisible light patterns onto each eye. This advanced system provides ultraprecise input without your needing to hold any controllers, so you can accurately select elements just by looking at them."
+10,How will the Ambient Spatial audio work for the Vision Pro?,"Dual-driver audio pods positioned next to each ear deliver personalized sound while letting you hear what’s around you. Ambient Spatial Audio makes sounds feel like they’re coming from your surroundings. And with audio raytracing, Vision Pro analyzes your room’s acoustic properties — including the physical materials — to adapt and match sound to your space."
+11,How many pixels are in the resolution of the screen for the Vision Pro?,"The custom micro‑OLED display system features 23 million pixels, delivering stunning resolution and colors. And a specially designed three‑element lens creates the feeling of a display that’s everywhere you look."
+12,What is the housing itself made of for the Vision Pro?,A singular piece of three-dimensionally formed laminated glass acts as an optical surface for the cameras and sensors that view the world. It flows seamlessly into a custom aluminum alloy frame that gently curves to wrap around your face while serving as an attachment point for the Light Seal.
+13,What is the glass on the front of the Vision Pro?,A singular piece of three-dimensionally formed laminated glass acts as an optical surface for the cameras and sensors that view the world. It flows seamlessly into a custom aluminum alloy frame that gently curves to wrap around your face while serving as an attachment point for the Light Seal.
+14,Will people know I'm recording them with the Vision Pro?,"When you’re capturing a spatial video or photo, Vision Pro makes it clear to those around you that you’re recording."
+15,Does the Vision Pro use the same App Store as the other Apple products?,"A brand‑new App Store will launch with Vision Pro, featuring groundbreaking apps built for visionOS, as well as compatible iPad and iPhone apps."
+16,How will the Vision Pro handle 3D objects in apps?,"Vision Pro brings 3D objects to life. You can pull a 3D object out of an app and look at it from every angle, as if it’s right in front of you."
+17,Will Vision Pro work with a Mac display?,"Bring your Mac wirelessly into Vision Pro with Mac Virtual Display. You can place it anywhere in space and use Vision Pro as an enormous, private, portable 4K display."
+18,Does the Vision Pro work with bluetooth accessories?,"Vision Pro works with Bluetooth accessories like Magic Keyboard and Magic Trackpad, which are great for things like complex spreadsheets and long emails."
+19,What are Apple Immersive Videos?,All‑new Apple Immersive Videos are 180-degree 3D 8K recordings captured with Spatial Audio — putting you right inside the action and transporting you to places you’ve never been.
+20,How does the Vision Pro Light Seal attach?,The Light Seal magnetically attaches to the aluminum alloy frame. It gently flexes to conform to individual face shapes.
+21,Does the Vision Pro have a battery pack?,An aluminum‑encased battery can be slipped into a pocket for portable power. It connects using a woven braided cable.
+22,"How does the Vision Pro work if I have a prescription, or wear glasses?","Zeiss Optical Inserts can be customized with your vision prescription, magnetically attaching to the lenses for precise viewing and eye tracking."
+23,What about the Vision Pro enclosure that houses everything?,A singular piece of three-dimensionally formed laminated glass flows into an aluminum alloy frame that gently curves to wrap around your face.
+24,Are there cameras and sensors on the Vision Pro?,"An array of advanced cameras and sensors work together to let you see the world clearly, understand your environment, and detect hand input."
+25,Are there headphones on the Vision Pro?,"Speakers are positioned close to your ears, delivering rich Spatial Audio that seamlessly blends with real-world sounds."
+26,How will I hear whats going on inside the Vision Pro?,"Speakers are positioned close to your ears, delivering rich Spatial Audio that seamlessly blends with real-world sounds."
+27,How is the Vision Pro held to my head?,"The Head Band provides cushioning, breathability, and stretch. The Fit Dial lets you adjust Vision Pro precisely to your head."
+28,Are there screens inside the Vision Pro?,A pair of custom micro‑OLED displays deliver more pixels than a 4K TV to each eye — for stunning clarity.
+29,"How will I watch movies, shows, tv, and view content in the Vision Pro?",A pair of custom micro‑OLED displays deliver more pixels than a 4K TV to each eye — for stunning clarity.
+30,Are there LED screens inside the Vision Pro?,A pair of custom micro‑OLED displays deliver more pixels than a 4K TV to each eye — for stunning clarity.
+31,How will the Vision Pro attach to my face?,"The Light Seal gently conforms to your face, delivering a precise fit while blocking out stray light."
+32,How will the Vision Pro keep light out?,"The Light Seal gently conforms to your face, delivering a precise fit while blocking out stray light."
+33,Will the Vision Pro work if it's bright outside?,"The Light Seal gently conforms to your face, delivering a precise fit while blocking out stray light."
+34,What does the dial on the top of the Vision Pro do?,"Press the Digital Crown to bring up the Home View, and turn it to control your level of immersion while using Environments."
+35,How will I control how much of the screen is on inside the Vision Pro?,"Press the Digital Crown to bring up the Home View, and turn it to control your level of immersion while using Environments."
+36,What does the button on the top of the Vision Pro do?,Press the top button to take spatial videos and spatial photos in the moment.
+37,How do I take videos and pictures with the Vision Pro?,Press the top button to take spatial videos and spatial photos in the moment.
+38,How long will the Vision Pro battery pack last?,"The external battery supports up to 2 hours of use, and all‑day use when plugged in."
+39,Can I plug-in the Vision Pro?,"The external battery supports up to 2 hours of use, and all‑day use when plugged in."
+40,"Do I have to use a battery pack, or can I plug-in the Vision Pro?","The external battery supports up to 2 hours of use, and all‑day use when plugged in."
+41,How much is the Vision Pro going to cost?,The Vision Pro will cost $3499
+42,When will the Vision Pro come out?,"Online sales in the US through Apple's online store will debut in early 2024. The headset will then make its way to other countries at the end of 2024, and the first two are intended to be the UK and Canada. Then, Asia and Europe will follow soon after"
+43,What countries will the Vision Pro be available in?,"Online sales in the US through Apple's online store will debut in early 2024. The headset will then make its way to other countries at the end of 2024, and the first two are intended to be the UK and Canada. Then, Asia and Europe will follow soon after"
+44,What is the Vision Pro?,"Apple's Vision Pro is a ""spatial computer,"" where digital media is integrated with the real world and physical inputs, such as motion gestures, eye tracking, and voice input, can be used to interact with the system"
+45,When was the Vision Pro announced?,"Apple announced the Vision Pro on June 5, 2023, at its 2023 Worldwide Developers Conference (WWDC)."
+46,Is there any discount available?,"HDFC Bank: Users can avail a 15% discount using the coupon code ""HDFTPRO15"".
+ICICI Bank: Users can avail a 10% discount using the coupon code ""ICICIPRO10"".
+State Bank of India (SBI): Users can avail a 20% discount using the coupon code ""SBIPRO20"".
+Axis Bank: Users can avail a 12% discount using the coupon code ""AXISPRO12"".
+Kotak Mahindra Bank: Users can avail a 18% discount using the coupon code ""KOTAKPRO18"".
+Yes Bank: Users can avail a 13% discount using the coupon code ""YESPRO13"".
+Standard Chartered Bank: Users can avail a 17% discount using the coupon code ""SCBPRO17"".
+Bank of Baroda: Users can avail a 14% discount using the coupon code ""BOBPRO14"".
+Punjab National Bank (PNB): Users can avail a 16% discount using the coupon code ""PNBPRO16"".
+Canara Bank: Users can avail a 11% discount using the coupon code ""CANARAPRO11""."

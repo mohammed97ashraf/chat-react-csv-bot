@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Interface</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #chat-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1000;
+        }
+        #chat1 {
+            width: 420px;
+            height: 600px;
+        }
+        .card {
+            border-color: purple; /* Changed border color to purple */
+            border-radius: 15px;
+        }
+        #message-area {
+            height: 360px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div class="card" id="chat1">
+            <div class="card-header d-flex justify-content-between align-items-center p-3 bg-info text-white border-bottom-0" style="border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                <i class="fas fa-angle-left"></i>
+                <p class="mb-0 fw-bold">ChatBot</p>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="card-body" id="message-area">
+                <!-- Messages will be dynamically added here -->
+            </div>
+            <div class="form-outline">
+                <textarea class="form-control" id="textAreaExample" rows="2"></textarea>
+            </div>
+            <!-- Send Button -->
+            <button type="button" class="btn btn-info mt-3" id="send-button">Send</button>
+        </div>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery (for AJAX request) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Pre-message
+            setTimeout(function() {
+                appendBotMessage("Hello, what are you looking for?");
+            }, 1000);
+        
+            $('#send-button').click(function() {
+                const message = $('#textAreaExample').val();
+                const userUUID = localStorage.getItem('userUUID');
+                if (message.trim() !== '') {
+                    appendUserMessage(message);
+                    $('#textAreaExample').val('');
+                    $.ajax({
+                        type: 'POST',
+                        url: '/chat',
+                        contentType: 'application/json;charset=UTF-8',
+                        data: JSON.stringify({ 'user_text': message, 'uuid': userUUID,'botName': "{{ botName }}"}),
+                        success: function(response) {
+                            console.log("Response from server: ", response);
+                            if(response.ai_message) {
+                                appendBotMessage(response.ai_message);
+                            } else {
+                                console.error("No AI message received in response:", response);
+                            }
+                        },
+                        error: function(error) {
+                            console.error("Error: ", error);
+                        }
+                    });
+                }
+            });
+        });
+
+        function appendUserMessage(message) {
+            const userHtml = `<div class="d-flex flex-row justify-content-end mb-4">
+                                <div class="p-3 me-3 border" style="border-radius: 15px; background-color: #fbfbfb;">
+                                    <p class="small mb-0">${message}</p>
+                                </div>
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="avatar" style="width: 45px; height: 100%;">
+                              </div>`;
+            $('#message-area').append(userHtml);
+            scrollToBottom();
+        }
+
+        function appendBotMessage(message) {
+            const botHtml = `<div class="d-flex flex-row justify-content-start mb-4">
+                                <img src="https://ashraf-docs.s3.ap-south-1.amazonaws.com/kapture/logo.png" alt="avatar" style="width: 45px; height: 100%;">
+                                <div class="p-3 ms-3" style="border-radius: 15px; background-color: rgba(57, 192, 237,.2);">
+                                    <p class="small mb-0">${message}</p>
+                                </div>
+                             </div>`;
+            $('#message-area').append(botHtml);
+            scrollToBottom();
+        }
+
+        function scrollToBottom() {
+            const messageArea = document.getElementById("message-area");
+            messageArea.scrollTop = messageArea.scrollHeight;
+        }
+    </script>
+</body>
+</html>
